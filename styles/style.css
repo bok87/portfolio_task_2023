@@ -1,0 +1,47 @@
+main {
+    background-image: url(/images/7598163.jpg);
+}
+main .profile {
+    display: flex;
+    flex-flow:column nowrap;
+    align-items: center;
+}
+main .profile .photo {
+    
+}
+main .profile .photo span {
+    width: 510px; height: 510px;
+    background: white;
+    border-radius:50%;
+    display: inline-block;
+    justify-content: flex-start;
+}
+/* main .profile .photo span img{
+    width:500px; height: 500px;
+    border-radius:50%; 
+}*/
+
+main .profile .web_2023 {}
+main .profile .web_2023 h1 {}
+main .profile .web_2023 span {}
+main .profile .web_2023 p {}
+main .profile .web_2023 .icon {}
+main .profile .web_2023 .icon a {}
+main .profile .web_2023 .icon a img {width: 5%;}
+
+main .profile a {}
+main .profile a span {}
+
+main .prf_img {}
+main .prf_img img {}
+
+main .cok {}
+main .cok .section {}
+main .cok .section a {}
+main .cok .section a img {}
+main .cok .section a h1 {}
+main .cok .section a p {}
+
+main {} 
+main .footer {}
+main .footer h1 {}
