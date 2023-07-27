@@ -1,47 +1,84 @@
 main {
     background-image: url(/images/7598163.jpg);
+    position: fixed;
 }
 main .profile {
     display: flex;
-    flex-flow:column nowrap;
-    align-items: center;
+    flex-flow:column nowrap; 
+    align-items: center; justify-content: center;
 }
 main .profile .photo {
-    
-}
-main .profile .photo span {
-    width: 510px; height: 510px;
+    width: 200px; height: 200px;  
+    overflow: hidden;
     background: white;
     border-radius:50%;
-    display: inline-block;
-    justify-content: flex-start;
+    border:white solid 6px;
+    animation:up 2s infinite linear alternate;
 }
-/* main .profile .photo span img{
-    width:500px; height: 500px;
-    border-radius:50%; 
-}*/
-
-main .profile .web_2023 {}
-main .profile .web_2023 h1 {}
-main .profile .web_2023 span {}
-main .profile .web_2023 p {}
-main .profile .web_2023 .icon {}
-main .profile .web_2023 .icon a {}
-main .profile .web_2023 .icon a img {width: 5%;}
-
-main .profile a {}
-main .profile a span {}
-
-main .prf_img {}
-main .prf_img img {}
-
+main .profile .photo img {
+    width: 100%;
+    position: relative;
+    top:-20px;
+}
+@keyframes up {
+    0% {transform:translateY(0px);}
+    100% {transform:translateY(-20px);}
+}
+/*  */
+main .profile h1 {}
+main .profile .loading {}
+main .profile .loading .bar {}
+main .profile p {}
+main .profile .icon {
+    
+}
+main .profile .icon a {}
+main .profile .icon a img {width: 5%;}
+/*  */
+main .gnb {
+    width : 40px; height: 40px;
+    display:block;
+    transform:translateX(-50%);
+}
+main .gnb span {
+    width: 40px; height: 8px;
+    background: #000;
+    display: flex; flex-flow: column nowrap;
+}
+/*  */
+main .prf_img {width:1260px; margin:0 auto;}
+main .prf_img p {}
+main .prf_img p .img1 {
+    transform: rotate(10deg); translateX(-100px);
+    background:url(/images/bg2.png) repeat-x ;
+    animation: bg 20s linear infinite;
+    height: 200px;
+    width: 150%;
+}
+/*  */
+main .prf_img p .img2 {
+    /* transform: rotate(-10deg);
+    background:url(/images/bg3.png) #242121; 
+    animation: bg 20s linear infinite;
+    display: block; */
+    height: 200px;
+    background: rgba(0,0,0,0.8) url(./images/bg3.png) repeat-x;
+    animation: bg 100s linear alternate-reverse infinite;
+    transform: rotate(10deg) translateX(-100px);
+    width: 150%;
+}
+@keyframes bg {
+    0% {background-position: 0 0;}
+    100% {background-position: 1000px 0;}
+}
+/*  */
 main .cok {}
 main .cok .section {}
 main .cok .section a {}
 main .cok .section a img {}
 main .cok .section a h1 {}
 main .cok .section a p {}
-
+/*  */
 main {} 
 main .footer {}
 main .footer h1 {}
