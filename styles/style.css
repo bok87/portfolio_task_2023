@@ -173,7 +173,7 @@ main .cok .cok_contents a .intro {
     background: #fff;
 }
 main .cok .cok_contents a .intro h1 {font-weight: 700;}
-main .cok .cok_contents a .intro h2 {}
+main .cok .cok_contents a .intro h2 {margin:10px;}
 main .cok .cok_contents a .intro p{}
 /*  */
 footer {
@@ -185,6 +185,6 @@ footer p {
     font-size: 2rem;
     color:white;
     text-shadow: 0 0 4px #333;
-    /* letter-spacing: 0.02em; */
+    letter-spacing: 0.02em;
     line-height: 50px;
 }
