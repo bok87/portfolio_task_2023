@@ -1,11 +1,16 @@
-main {
-    background-image: url(/images/7598163.jpg);
-    position: fixed;
+body {
+    width: 100%; height: 100%;
+    background: url(/images/7598163.jpg) center;
+    background-attachment: fixed;
+    background-size: cover;
 }
+main {}
 main .profile {
     display: flex;
     flex-flow:column nowrap; 
     align-items: center; justify-content: center;
+    height: 100%;
+    margin-top: 250px;
 }
 main .profile .photo {
     width: 200px; height: 200px;  
@@ -13,72 +18,179 @@ main .profile .photo {
     background: white;
     border-radius:50%;
     border:white solid 6px;
-    animation:up 2s infinite linear alternate;
+    animation:up 2s infinite linear alternate; 
 }
 main .profile .photo img {
     width: 100%;
-    position: relative;
-    top:-20px;
 }
 @keyframes up {
     0% {transform:translateY(0px);}
     100% {transform:translateY(-20px);}
 }
 /*  */
-main .profile h1 {}
-main .profile .loading {}
-main .profile .loading .bar {}
-main .profile p {}
-main .profile .icon {
+main .profile h1 {
+    font-size: 2.2rem;
+    font-weight:700;
+    background: linear-gradient(90deg, hotpink, skyblue, hotpink);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size:400%;
+    animation:web_2023 2s linear infinite;
+    font-family: 'Pacifico', cursive;
+    padding: 20px;
+}
+@keyframes web_2023 {
+    0% {background-position:0 0;}
+    100% {background-position: -1000px 0;}
+}
+main .profile .loading {
+    width:350px; height: 10px;
+    background: white;
+    border-radius:10px;
+    margin:20px 0 50px 0;
+    overflow: hidden;
+}
+main .profile .photo:hover~.loading .bar {
+    transform: scaleX(1);
+}
+main .profile .loading .bar {
+    background: hotpink; transform: scaleX(0);
+    transition: all 3s; display: block;
+    width:350px; height: 10px;
+    transform-origin: left top;
     
 }
-main .profile .icon a {}
-main .profile .icon a img {width: 5%;}
+main .profile p {
+    font-weight:700;
+    margin-bottom: 20px;
+}
+/*  */
+main .profile .icon {
+    display: flex;
+    margin-bottom: 300px;
+}
+main .profile .icon a {
+    width:25px;
+    margin:10px;
+    position: relative;
+}
+main .profile .icon a:hover .tip {
+    display: block;
+
+}
+main .profile .icon a img {
+    width:100%;
+    
+}
+main .profile .icon a .tip {
+    position: absolute;
+    display:none;
+    padding:8px;
+    background:#222;
+    color:#fff;
+    font-family: 'Pacifico', cursive;
+    margin-top: 10px;
+}
 /*  */
 main .gnb {
-    width : 40px; height: 40px;
+    width : 30px; height: 25px;
     display:block;
-    transform:translateX(-50%);
+    position: absolute;  
+    left:50%; bottom: 10%;
+}
+main .gnb:hover span:nth-child(1){
+    transform: rotate(45deg) /* translateY(14px) */;
+    transform-origin: left top;
+    /* transform-origin: center; */
+}
+main .gnb:hover span:nth-child(2){
+    /* display: none; */
+    opacity: 0;
+}
+main .gnb:hover span:nth-child(3){
+    transform: rotate(-45deg) /* translateY(-14px) */;
+    /* transform-origin: center; */
+    transform-origin: left bottom;
 }
 main .gnb span {
-    width: 40px; height: 8px;
+    width: 100%; height: 5px;
     background: #000;
-    display: flex; flex-flow: column nowrap;
+    display: block;
+    position:absolute; 
+    border-radius:5px;
+    transition:all 0.5s linear;
 }
+main .gnb span:nth-child(1) {top:0;}
+main .gnb span:nth-child(2) {top:10px;}
+main .gnb span:nth-child(3) {bottom:0;}
 /*  */
-main .prf_img {width:1260px; margin:0 auto;}
-main .prf_img p {}
-main .prf_img p .img1 {
-    transform: rotate(10deg); translateX(-100px);
+main .prf_img {
+    margin-bottom: 200px;
+}
+main .prf_img .img1 {
     background:url(/images/bg2.png) repeat-x ;
-    animation: bg 20s linear infinite;
+    transform: rotate(-10deg) translateX(-100px);
+    animation: bg 80s linear alternate-reverse infinite;
     height: 200px;
     width: 150%;
 }
-/*  */
-main .prf_img p .img2 {
-    /* transform: rotate(-10deg);
-    background:url(/images/bg3.png) #242121; 
-    animation: bg 20s linear infinite;
-    display: block; */
+main .prf_img .img2 {
+    background: rgba(27, 26, 26, 0.9) url(/images/bg3.png)  repeat-x;
+    transform: rotate(10deg)translateX(-100px);
     height: 200px;
-    background: rgba(0,0,0,0.8) url(./images/bg3.png) repeat-x;
-    animation: bg 100s linear alternate-reverse infinite;
-    transform: rotate(10deg) translateX(-100px);
     width: 150%;
+    animation: bg 80s linear  infinite;
 }
 @keyframes bg {
     0% {background-position: 0 0;}
-    100% {background-position: 1000px 0;}
+    100% {background-position: 10000px 0;}
 }
 /*  */
-main .cok {}
-main .cok .section {}
-main .cok .section a {}
-main .cok .section a img {}
-main .cok .section a h1 {}
-main .cok .section a p {}
+main .cok {
+    max-width:1300px; margin:0 auto;
+}
+main .cok .cok_contents {
+    display: flex; flex-flow: row nowrap;
+    align-items: center; justify-content: space-around
+    /* display:grid;
+    grid-template-columns:repeat(4,1fr);
+    justify-content: space-around; */
+}
+main .cok .cok_contents a {
+    background: #fff url(/images/cok.jpg) repeat center;
+    background-size: auto 50%;
+    width:300px;
+    height:300px; position: relative;
+    margin-right:10px;
+    transition:all 1s;
+    /* background:#fff url(/images/bg.jpg) no-repeat;
+    background-size:auto 100%;
+    border-top-left-radius:100px;
+    border-top-right-radius: 100px;
+    height:350px; position:relative;
+    margin:7px; transition:all 0.3s; */
+}
+main .cok .cok_contents a .intro {
+    width:100%; padding:20px;/*
+    text-align: center;
+    margin-right:10px;
+    display: block; */
+    /* background:#fff; position:absolute; bottom:0; width:100%; left:0;
+    padding:20px; text-align:center; */
+}
+main .cok .cok_contents a .intro h1 {font-weight: 700;}
+main .cok .cok_contents a .intro h2 {}
+main .cok .cok_contents a .intro p{}
 /*  */
-main {} 
-main .footer {}
-main .footer h1 {}
+footer {
+    width: 100%; margin:0 auto;
+    text-align: center;
+    margin:150px 0 150px 0;
+}
+footer p {
+    font-size: 2rem;
+    color:white;
+    text-shadow: 0 0 4px #333;
+    /* letter-spacing: 0.02em; */
+    line-height: 50px;
+}
